@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'input_item_dialog.dart';
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -10,7 +12,10 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Add your onPressed code here!
+          showDialog(
+            context: context,
+            builder: (BuildContext context) => InputItemDialog(),
+          );
         },
         child: Icon(Icons.add),
         backgroundColor: Colors.green,
